@@ -1,0 +1,38 @@
+<nz-layout class="main">
+  <nz-layout>
+    <nz-sider nzWidth="380px">
+      <div></div>
+      <ul nz-menu nzMode="inline">
+        <li nz-menu-item routerLink="/introduction">
+          <span>Введение</span>
+        </li>
+        <li nz-submenu nzOpen nzTitle="subnav 1">
+          <ul>
+            <li nz-menu-item>option1</li>
+            <li nz-menu-item>option2</li>
+            <li nz-menu-item>option3</li>
+            <li nz-menu-item>option4</li>
+          </ul>
+        </li>
+        <li nz-submenu nzTitle="subnav 2">
+          <ul>
+            <li nz-menu-item>option5</li>
+            <li nz-menu-item>option6</li>
+          </ul>
+        </li>
+        <li nz-submenu nzTitle="subnav 3">
+          <ul>
+            <li nz-menu-item>option9</li>
+          </ul>
+        </li>
+      </ul>
+    </nz-sider>
+    <nz-layout>
+      <nz-row nzJustify="center">
+        <nz-col nzSpan="12">
+          <router-outlet></router-outlet>
+        </nz-col>
+      </nz-row>
+    </nz-layout>
+  </nz-layout>
+</nz-layout>
