@@ -14,13 +14,15 @@ import {NzLayoutModule} from "ng-zorro-antd/layout";
 import {NzMenuModule} from "ng-zorro-antd/menu";
 import {NzGridModule} from "ng-zorro-antd/grid";
 import { IntroductionComponent } from './components/introduction/introduction.component';
+import { LineComponent } from './components/line/line.component';
 
 registerLocaleData(ru);
 
 @NgModule({
   declarations: [
     AppComponent,
-    IntroductionComponent
+    IntroductionComponent,
+    LineComponent
   ],
   imports: [
     BrowserModule,
