@@ -2,7 +2,17 @@
   min-height: 100%;
 }
 
-nz-content {
-  min-height: 93vh;
-  background: white;
+.logo {
+  background-color: #a41e22;
+  min-height: 100px;
+  font-size: 30px;
+  color: white;
+  padding: 10px 20px;
+  line-height: 34px;
+  /*margin-bottom: 20px;*/
 }
+
+.content {
+  background-color: #e8e8e8;
+}
+

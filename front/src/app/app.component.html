@@ -1,7 +1,7 @@
-<nz-layout class="main">
-  <nz-layout>
+<nz-row class="main">
+  <nz-col nzSpan="6">
     <nz-sider nzWidth="380px">
-      <div></div>
+      <div class="logo">Компьютерная графика и геометрия</div>
       <ul nz-menu nzMode="inline">
         <li nz-menu-item routerLink="/introduction">
           <span>Введение</span>
@@ -11,6 +11,9 @@
         </li>
         <li nz-menu-item>
           <span>Растеризация</span>
+        </li>
+        <li nz-menu-item (click)="switch()">
+          <span>Среда выполнения</span>
         </li>
         <li nz-submenu nzTitle="subnav 2">
           <ul>
@@ -25,12 +28,56 @@
         </li>
       </ul>
     </nz-sider>
-    <nz-layout>
-      <nz-row nzJustify="center">
-        <nz-col nzSpan="12">
-          <router-outlet></router-outlet>
-        </nz-col>
-      </nz-row>
-    </nz-layout>
-  </nz-layout>
-</nz-layout>
+  </nz-col>
+  <nz-col class="content" nzSpan="18">
+    <nz-row nzJustify="center">
+      <nz-col nzSpan="15">
+        <router-outlet></router-outlet>
+      </nz-col>
+    </nz-row>
+  </nz-col>
+</nz-row>
+
+<nz-drawer
+  [nzClosable]="false"
+  [nzVisible]="visible"
+  [nzHeight]="'70%'"
+  nzPlacement="bottom"
+  nzTitle="Среда исполнения"
+  (nzOnClose)="switch()"
+>
+  <ng-container *nzDrawerContent>
+    <nz-row nzJustify="space-between" [nzGutter]="[10,10]">
+      <nz-col nzSpan="11">
+        <textarea spellcheck="false" rows="10" nz-input [(ngModel)]="codeInput"></textarea>
+        <nz-collapse>
+          <nz-collapse-panel
+            [nzHeader]="'Консоль'"
+          >
+            <textarea spellcheck="false" rows="5" nz-input [(ngModel)]="codeResult"></textarea>
+          </nz-collapse-panel>
+        </nz-collapse>
+      </nz-col>
+      <nz-col nzSpan="2">
+        <button [style.width.%]="100" nz-button (click)="post()">
+          <i nz-icon nzType="play-circle" nzTheme="outline"></i>
+          Run
+        </button>
+      </nz-col>
+      <nz-col nzSpan="11">
+        <nz-spin [nzSpinning]="loading">
+          <nz-row nzJustify="center" nzAlign="middle">
+            <nz-col>
+              <nz-image-group>
+                <img nz-image class="result-img" [src]="imgUrl" [nzSrc]="imgUrl"/>
+              </nz-image-group>
+            </nz-col>
+
+          </nz-row>
+        </nz-spin>
+      </nz-col>
+    </nz-row>
+  </ng-container>
+</nz-drawer>
+
+

@@ -15,6 +15,13 @@ import {NzMenuModule} from "ng-zorro-antd/menu";
 import {NzGridModule} from "ng-zorro-antd/grid";
 import { IntroductionComponent } from './components/introduction/introduction.component';
 import { LineComponent } from './components/line/line.component';
+import {NzButtonModule} from "ng-zorro-antd/button";
+import {NzDrawerModule} from "ng-zorro-antd/drawer";
+import {NzInputModule} from "ng-zorro-antd/input";
+import {NzIconModule} from "ng-zorro-antd/icon";
+import {NzSpinModule} from "ng-zorro-antd/spin";
+import {NzImageModule} from "ng-zorro-antd/image";
+import {NzCollapseModule} from "ng-zorro-antd/collapse";
 
 registerLocaleData(ru);
 
@@ -32,7 +39,14 @@ registerLocaleData(ru);
     BrowserAnimationsModule,
     NzLayoutModule,
     NzMenuModule,
-    NzGridModule
+    NzGridModule,
+    NzButtonModule,
+    NzDrawerModule,
+    NzInputModule,
+    NzIconModule,
+    NzSpinModule,
+    NzImageModule,
+    NzCollapseModule
   ],
   providers: [{ provide: NZ_I18N, useValue: ru_RU }],
   bootstrap: [AppComponent]

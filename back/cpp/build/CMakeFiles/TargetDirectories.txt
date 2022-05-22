@@ -1,0 +1,3 @@
+/home/artem/computer-graphics-manual/back/cpp/build/CMakeFiles/rebuild_cache.dir
+/home/artem/computer-graphics-manual/back/cpp/build/CMakeFiles/tga.dir
+/home/artem/computer-graphics-manual/back/cpp/build/CMakeFiles/edit_cache.dir

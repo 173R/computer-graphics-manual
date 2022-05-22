@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/tga.dir/main.cpp.o CMakeFiles/tga.dir/tgaimage.cpp.o CMakeFiles/tga.dir/model.cpp.o  -o tga 

@@ -1,20 +1,84 @@
 <main class="material">
   <h1>
-    1 Создание линии - Алгоритм Брезенхэма
+    Линия - Алгоритм Брезенхэма
   </h1>
   <nz-row nzGutter="10">
-    <nz-col nzSpan="12">
+    <nz-col nzSpan="24">
       <p>
-        Цель данной главы - создать рендер с помощью проволочной сетки, для этого нужно научится рисовать отрезки.
+        Цель данной главы - создать рендер в проволочной сетки, для этого нужно научиться рисовать отрезки.
       </p>
+      <div class="img-wrapper">
+        <img src="/assets/img/line_1.png" alt="">
+        <nz-row nzJustify="center">
+          <nz-col>
+            Рисунок 1.1 - Проволочный рендер
+          </nz-col>
+        </nz-row>
+      </div>
       <p>Для создания линии с помощью точек (пикселей) используется алгоритм Брезенхема - это алгоритм, определяющий, какие точки двумерного растра нужно закрасить, чтобы получить близкое приближение прямой линии между двумя заданными точками. Это один из старейших алгоритмов в машинной графике — он был разработан Джеком Элтоном Брезенхэмом (англ. Jack Elton Bresenham) в компании IBM в 1962 году. Алгоритм широко используется, в частности, для рисования линий на экране компьютера.</p>
+      <div class="img-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/LineBresenham.gif/336px-LineBresenham.gif" alt="">
+        <nz-row nzJustify="center">
+          <nz-col>
+            Рисунок 1.2 - Демонстрация работы алгоритма
+          </nz-col>
+        </nz-row>
+      </div>
+      <h2>
+        Описание алгоритма
+      </h2>
       <p>
-
+        Отрезок проводится между двумя точками - (x0, y0) и (x1, y1), где в этих парах указаны столбец и строка соответственно, номера которых растут вправо и вниз. Сначала мы будем предполагать, что наша линия идёт вправо и вниз, причём горизонтальное расстояние x1 - x0 превосходит вертикальное y1 - y0, то есть наклон линии от горизонтали — менее 45°. Наша цель состоит в том, чтобы для каждого столбца x между x0 и x1 определить, какая строка y ближе всего к линии, и нарисовать точку (x, y).
       </p>
+      <div class="img-wrapper">
+        <img src="assets/img/line_3.svg" alt="">
+        <nz-row nzJustify="center">
+          <nz-col>
+            Рисунок 1.3 - Общая формула линии между двумя точками
+          </nz-col>
+        </nz-row>
+      </div>
+      <h2>
+        Проволочный рендер
+      </h2>
+      <p>Теперь с помощью алгоритма создания линий мы готовы создать проволочный рендер. Для хранения 3D модели рекомендуется использовать формат .obj из-за его простоты, файл данного формат содержит координаты вершин (X, Y, Z), по одной координате на каждую строку.</p>
+      <h2>Задание</h2>
+      <h3>1. Реализовать алгоритм построения линии</h3>
+      <h4>Начальный код:</h4>
+      <textarea spellcheck="false" rows="10" nz-input>
+#include "tgaimage.h"
 
+const TGAColor red   = TGAColor(255, 0,   0,   255);
+
+void line(int x0, int y0, int x1, int y1, TGAImage &image, TGAColor color) {
+    /*Создать*/
+}
+
+int main(int argc, char** argv) {
+        TGAImage image(300, 300, TGAImage::RGB);
+        line(20, 13, 40, 80, image, red);
+
+        image.flip_vertically();
+        image.write_tga_file("output.tga");
+        return 0;
+}
+      </textarea>
+      <h3>2. Создать рендер трёх линий различных цвет под разным углом, как показанно на примере.</h3>
+      <div class="img-wrapper">
+        <img src="assets/img/line_4.jpg" alt="">
+        <nz-row nzJustify="center">
+          <nz-col>
+            Рисунок 1.4 - Пример выполненного задания - 2
+          </nz-col>
+        </nz-row>
+      </div>
     </nz-col>
-    <nz-col nzSpan="12">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/LineBresenham.gif/336px-LineBresenham.gif" alt="">
+    <nz-col nzSpan="24">
+      <div>
+      </div>
+      <!--<div class="img-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/LineBresenham.gif/336px-LineBresenham.gif" alt="">
+      </div>-->
     </nz-col>
   </nz-row>
 </main>
