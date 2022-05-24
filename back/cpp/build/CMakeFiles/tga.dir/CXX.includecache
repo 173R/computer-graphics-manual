@@ -11,16 +11,8 @@ cmath
 -
 
 /home/artem/computer-graphics-manual/back/cpp/main.cpp
-vector
--
-cmath
--
 tgaimage.h
 /home/artem/computer-graphics-manual/back/cpp/tgaimage.h
-model.h
-/home/artem/computer-graphics-manual/back/cpp/model.h
-geometry.h
-/home/artem/computer-graphics-manual/back/cpp/geometry.h
 
 /home/artem/computer-graphics-manual/back/cpp/model.cpp
 iostream
