@@ -22,6 +22,7 @@ import {NzIconModule} from "ng-zorro-antd/icon";
 import {NzSpinModule} from "ng-zorro-antd/spin";
 import {NzImageModule} from "ng-zorro-antd/image";
 import {NzCollapseModule} from "ng-zorro-antd/collapse";
+import {NzCardModule} from "ng-zorro-antd/card";
 
 registerLocaleData(ru);
 
@@ -46,7 +47,8 @@ registerLocaleData(ru);
     NzIconModule,
     NzSpinModule,
     NzImageModule,
-    NzCollapseModule
+    NzCollapseModule,
+    NzCardModule
   ],
   providers: [{ provide: NZ_I18N, useValue: ru_RU }],
   bootstrap: [AppComponent]

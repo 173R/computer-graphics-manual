@@ -21,11 +21,16 @@ p {
 }
 
 .img-wrapper {
-  padding: 10px 10%;
+  padding: 10px 20%;
   img {
     object-fit: contain;
     width: 100%;
     height: 100%;
+  }
+  nz-row {
+    nz-col {
+      text-align: center;
+    }
   }
 }
 
