@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +24,8 @@ import {NzSpinModule} from "ng-zorro-antd/spin";
 import {NzImageModule} from "ng-zorro-antd/image";
 import {NzCollapseModule} from "ng-zorro-antd/collapse";
 import {NzCardModule} from "ng-zorro-antd/card";
+import { RasterizationComponent } from './components/rasterization/rasterization.component';
+import { ZbufferComponent } from './components/zbuffer/zbuffer.component';
 
 registerLocaleData(ru);
 
@@ -30,7 +33,9 @@ registerLocaleData(ru);
   declarations: [
     AppComponent,
     IntroductionComponent,
-    LineComponent
+    LineComponent,
+    RasterizationComponent,
+    ZbufferComponent
   ],
   imports: [
     BrowserModule,
@@ -48,9 +53,17 @@ registerLocaleData(ru);
     NzSpinModule,
     NzImageModule,
     NzCollapseModule,
-    NzCardModule
+    NzCardModule,
+    HighlightModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: ru_RU }],
+  providers: [{
+    provide: NZ_I18N, useValue: ru_RU
+  },{
+    provide: HIGHLIGHT_OPTIONS,
+    useValue: {
+      fullLibraryLoader: () => import('highlight.js'),
+    }
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

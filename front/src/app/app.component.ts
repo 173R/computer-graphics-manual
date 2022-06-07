@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {HttpClient, HttpEventType, HttpRequest, HttpResponse} from "@angular/common/http";
 import {Observable, Subject} from "rxjs";
+import {HighlightLoader} from "ngx-highlightjs";
 
 @Component({
   selector: 'app-root',
@@ -15,17 +16,19 @@ export class AppComponent {
   codeInput: string = "#include \"tgaimage.h\"\n" +
     "\n" +
     "const TGAColor white = TGAColor(255, 255, 255, 255);\n" +
-    "const TGAColor red   = TGAColor(255, 0,   0,   255);\n" +
+    "const TGAColor red   = TGAColor(255, 0, 0, 255);\n" +
     "\n" +
     "int main(int argc, char** argv) {\n" +
-    "  TGAImage image(100, 100, TGAImage::RGB);\n" +
-    "  image.set(52, 41, red);\n" +
-    "  image.flip_vertically();\n" +
-    "  image.write_tga_file(\"output.tga\");\n" +
-    "  return 0;\n" +
+    " TGAImage image(100, 100, TGAImage::RGB);\n" +
+    " image.set(52, 41, red);\n" +
+    " image.flip_vertically();\n" +
+    " image.write_tga_file(\"output.tga\");\n" +
+    " return 0;\n" +
     "}"
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(
+    private httpClient: HttpClient,
+  ) { }
 
   public post(): Observable<number>{
 

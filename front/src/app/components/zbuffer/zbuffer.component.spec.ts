@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LineComponent } from './line.component';
+import { ZbufferComponent } from './zbuffer.component';
 
-describe('LineComponent', () => {
-  let component: LineComponent;
-  let fixture: ComponentFixture<LineComponent>;
+describe('ZbufferComponent', () => {
+  let component: ZbufferComponent;
+  let fixture: ComponentFixture<ZbufferComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LineComponent ]
+      declarations: [ ZbufferComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LineComponent);
+    fixture = TestBed.createComponent(ZbufferComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
