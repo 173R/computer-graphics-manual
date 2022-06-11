@@ -26,6 +26,7 @@ import {NzCollapseModule} from "ng-zorro-antd/collapse";
 import {NzCardModule} from "ng-zorro-antd/card";
 import { RasterizationComponent } from './components/rasterization/rasterization.component';
 import { ZbufferComponent } from './components/zbuffer/zbuffer.component';
+import { ImageComponent } from './components/image/image.component';
 
 registerLocaleData(ru);
 
@@ -35,7 +36,8 @@ registerLocaleData(ru);
     IntroductionComponent,
     LineComponent,
     RasterizationComponent,
-    ZbufferComponent
+    ZbufferComponent,
+    ImageComponent
   ],
   imports: [
     BrowserModule,

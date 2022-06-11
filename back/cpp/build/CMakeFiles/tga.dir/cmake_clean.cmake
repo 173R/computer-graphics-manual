@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/tga.dir/main.cpp.o"
   "CMakeFiles/tga.dir/tgaimage.cpp.o"
   "CMakeFiles/tga.dir/model.cpp.o"
+  "CMakeFiles/tga.dir/geometry.cpp.o"
   "tga.pdb"
   "tga"
 )

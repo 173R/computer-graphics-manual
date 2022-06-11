@@ -123,6 +123,33 @@ tga/fast:
 	$(MAKE) -f CMakeFiles/tga.dir/build.make CMakeFiles/tga.dir/build
 .PHONY : tga/fast
 
+geometry.o: geometry.cpp.o
+
+.PHONY : geometry.o
+
+# target to build an object file
+geometry.cpp.o:
+	$(MAKE) -f CMakeFiles/tga.dir/build.make CMakeFiles/tga.dir/geometry.cpp.o
+.PHONY : geometry.cpp.o
+
+geometry.i: geometry.cpp.i
+
+.PHONY : geometry.i
+
+# target to preprocess a source file
+geometry.cpp.i:
+	$(MAKE) -f CMakeFiles/tga.dir/build.make CMakeFiles/tga.dir/geometry.cpp.i
+.PHONY : geometry.cpp.i
+
+geometry.s: geometry.cpp.s
+
+.PHONY : geometry.s
+
+# target to generate assembly for a file
+geometry.cpp.s:
+	$(MAKE) -f CMakeFiles/tga.dir/build.make CMakeFiles/tga.dir/geometry.cpp.s
+.PHONY : geometry.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -213,6 +240,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... tga"
 	@echo "... edit_cache"
+	@echo "... geometry.o"
+	@echo "... geometry.i"
+	@echo "... geometry.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

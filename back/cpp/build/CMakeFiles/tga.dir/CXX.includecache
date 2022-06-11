@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/home/artem/computer-graphics-manual/back/cpp/geometry.cpp
+vector
+-
+cassert
+-
+cmath
+-
+iostream
+-
+geometry.h
+/home/artem/computer-graphics-manual/back/cpp/geometry.h
+
 /home/artem/computer-graphics-manual/back/cpp/geometry.h
 cmath
 -
@@ -43,6 +55,8 @@ vector
 -
 geometry.h
 /home/artem/computer-graphics-manual/back/cpp/geometry.h
+tgaimage.h
+/home/artem/computer-graphics-manual/back/cpp/tgaimage.h
 
 /home/artem/computer-graphics-manual/back/cpp/tgaimage.cpp
 iostream

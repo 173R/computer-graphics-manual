@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/artem/computer-graphics-manual/back/cpp/geometry.cpp" "/home/artem/computer-graphics-manual/back/cpp/build/CMakeFiles/tga.dir/geometry.cpp.o"
   "/home/artem/computer-graphics-manual/back/cpp/main.cpp" "/home/artem/computer-graphics-manual/back/cpp/build/CMakeFiles/tga.dir/main.cpp.o"
   "/home/artem/computer-graphics-manual/back/cpp/model.cpp" "/home/artem/computer-graphics-manual/back/cpp/build/CMakeFiles/tga.dir/model.cpp.o"
   "/home/artem/computer-graphics-manual/back/cpp/tgaimage.cpp" "/home/artem/computer-graphics-manual/back/cpp/build/CMakeFiles/tga.dir/tgaimage.cpp.o"
