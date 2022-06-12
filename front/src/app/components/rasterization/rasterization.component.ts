@@ -25,7 +25,6 @@ export class RasterizationComponent implements OnInit {
     "    triangle(t2[0], t2[1], t2[2], image, green);";
 
   code2 = "void triangle(Vec2i t0, Vec2i t1, Vec2i t2, TGAImage &image, TGAColor color) {\n" +
-    "    // sort the vertices, t0, t1, t2 lower-to-upper (bubblesort yay!)\n" +
     "    if (t0.y>t1.y) std::swap(t0, t1);\n" +
     "    if (t0.y>t2.y) std::swap(t0, t2);\n" +
     "    if (t1.y>t2.y) std::swap(t1, t2);\n" +

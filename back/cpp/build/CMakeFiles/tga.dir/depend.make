@@ -4,9 +4,7 @@
 CMakeFiles/tga.dir/geometry.cpp.o: ../geometry.cpp
 CMakeFiles/tga.dir/geometry.cpp.o: ../geometry.h
 
-CMakeFiles/tga.dir/main.cpp.o: ../geometry.h
 CMakeFiles/tga.dir/main.cpp.o: ../main.cpp
-CMakeFiles/tga.dir/main.cpp.o: ../model.h
 CMakeFiles/tga.dir/main.cpp.o: ../tgaimage.h
 
 CMakeFiles/tga.dir/model.cpp.o: ../geometry.h

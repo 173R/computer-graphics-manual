@@ -27,6 +27,9 @@ import {NzCardModule} from "ng-zorro-antd/card";
 import { RasterizationComponent } from './components/rasterization/rasterization.component';
 import { ZbufferComponent } from './components/zbuffer/zbuffer.component';
 import { ImageComponent } from './components/image/image.component';
+import { PerspectiveComponent } from './components/perspective/perspective.component';
+import { CameraComponent } from './components/camera/camera.component';
+import { GeneralComponent } from './components/general/general.component';
 
 registerLocaleData(ru);
 
@@ -37,7 +40,10 @@ registerLocaleData(ru);
     LineComponent,
     RasterizationComponent,
     ZbufferComponent,
-    ImageComponent
+    ImageComponent,
+    PerspectiveComponent,
+    CameraComponent,
+    GeneralComponent
   ],
   imports: [
     BrowserModule,

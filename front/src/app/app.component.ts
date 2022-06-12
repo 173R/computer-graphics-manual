@@ -59,6 +59,14 @@ export class AppComponent {
     this.imgUrl = 'http://localhost:3000/img?' + new Date().getTime();
   }
 
+  onActivate(event: any) {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
   switch(): void {
     this.visible = !this.visible;
   }
